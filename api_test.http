@@ -1,0 +1,22 @@
+### Test 1: API Test Endpoint
+GET http://127.0.0.1:8001/api/test/
+
+### Test 2: Create a user via admin (manual)
+# Go to: http://127.0.0.1:8001/admin/users/user/add/
+# Create user: student1 / student123 / STUDENT
+
+### Test 3: Check admin users list
+GET http://127.0.0.1:8001/admin/users/user/
+
+### Test 4: Register a new user
+POST http://127.0.0.1:8001/api/register/
+Content-Type: application/json
+
+{
+  "username": "student.jane",
+  "email": "jane@stinet.digital",
+  "password": "Password123!",
+  "password2": "Password123!",
+  "role": "STUDENT",
+  "phone": "08022222222"
+}
